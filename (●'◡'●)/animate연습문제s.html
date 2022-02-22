@@ -60,15 +60,25 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script  type="text/javascript">
 	$(document).ready(function(){
-      $('.nav li.allbtn').on('click', function(){
-				$('.nav li.allbtn').animate({
-					$('.nav li.allbtn').fadein(){}
+		$('.allbtn').on('click', function(){
+			$('.nav_s').animate({
+				right:'0px'
+			},1000)
+			$('.nav_s li ').each(function(){
+				$(this).mouseenter(function(){
+					$(this).find('a').css('color', 'yellow')
 				})
-      })
-			$(this).find('.nav_s ul li').
-
-
-    })
+				$(this).mouseleave(function(){
+					$(this).find('a').css('color','#fff')
+				})
+			})
+			$('.close').on('click', function(){
+				$('.nav_s').animate({
+					right:'-600px'
+				},1000)
+			})
+		})
+	})
 </script>
  </head>
  <body>
